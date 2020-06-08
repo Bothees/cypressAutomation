@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "clean:reports":"rm -rf mochawesome-report/",
+        "test":"npm run clean:reports && cypress run",
+        "merge-reports":"mochawesome-merge mochawesome-report/*.json > cypress-test-report.json",
+        "create:html:report":"marge --reportDir Testreport cypress-test-report.json",
+        "generate:html:report":"npm run merge-reports && npm run create:html:report"
+    }
+}

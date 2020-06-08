@@ -4,5 +4,11 @@
   "pageLoadTimeout": 30000,
   "env": {
     "baseUrl": "https://www.moneysupermarket.com/"
+  },
+  "reporter":"../node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+    "overwrite":false,
+    "html":false,
+    "json":true
   }
 }
