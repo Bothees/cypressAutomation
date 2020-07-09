@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-08T21:10:03.591Z",
+    "end": "2020-07-08T21:10:40.747Z",
+    "duration": 37156,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91928fd0-9e70-4059-a642-955d564bdc93",
+      "title": "",
+      "fullFile": "cypress/integration/login.js",
+      "file": "cypress/integration/login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00ef7c79-9e54-4023-a0eb-0baa2bb31cfe",
+          "title": "First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful Login",
+              "fullTitle": "First Test Successful Login",
+              "timedOut": null,
+              "duration": 6753,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.moneysupermarket.com/my-account/sign-in/');\ncy.get('#email').type(\"bothees@gmail.com\");\ncy.get('#password').type(\"Autotest2018\");\ncy.get('#submit').click();\ncy.get('.sign-out__user-name').should('contain.text', 'Hi Boothiraj');\ncy.get('.sign-out__button').click();",
+              "err": {},
+              "uuid": "5c1541ff-6423-460e-8ad9-4e3614742ba7",
+              "parentUUID": "00ef7c79-9e54-4023-a0eb-0baa2bb31cfe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c1541ff-6423-460e-8ad9-4e3614742ba7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6753,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a1b5efba-6520-4d21-a829-3bdab7aa54a7",
+          "title": "Check Quote History",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify All the options available",
+              "fullTitle": "Check Quote History verify All the options available",
+              "timedOut": null,
+              "duration": 5493,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.navigation-bar__item-link').each(function ($menu, index, $list) {\n  var t = $list.get(index).innerText;\n  expect(t).to.equal(list[index]);\n});\ncy.get('.sign-out__button').click();",
+              "err": {},
+              "uuid": "b3023142-f36a-4aed-bb21-7bee9ac0749a",
+              "parentUUID": "a1b5efba-6520-4d21-a829-3bdab7aa54a7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b3023142-f36a-4aed-bb21-7bee9ac0749a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5493,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a1281beb-08f7-44c2-bdb1-1c9dfb0bba4a",
+          "title": "Profile information",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify Profile information",
+              "fullTitle": "Profile information verify Profile information",
+              "timedOut": null,
+              "duration": 8028,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.navigation-bar__item-link').each(function ($menu, index, $list) {\n  if ($list.get(index).innerText === list[2]) {\n    $list.get(index).click();\n  }\n});\ncy.get('.person-details__name').then(function ($input) {\n  expect($input[0].innerText).to.eq('Boothiraj Palanisamy');\n});\ncy.get('.sign-out__button').click();",
+              "err": {},
+              "uuid": "9739f07f-37f0-4b56-a6fd-54114474f8a0",
+              "parentUUID": "a1281beb-08f7-44c2-bdb1-1c9dfb0bba4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9739f07f-37f0-4b56-a6fd-54114474f8a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8028,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "957d5acc-b96d-478d-8c9c-9b2cb2297329",
+          "title": "Top Navigation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hover Top Navigation and click on option",
+              "fullTitle": "Top Navigation Hover Top Navigation and click on option",
+              "timedOut": null,
+              "duration": 14424,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.top-navigation-container li').each(function ($menu, index, $list) {\n  if ($menu.text().includes(topNavigationList[0])) {\n    cy.wrap($menu).click();\n  }\n});\ncy.get('.sign-out__button').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: `cy.click()` failed because this element is not visible:\n\n`<li class=\"header-links-section-component\" data-ng-class=\"{ 'header-links-section-component--opened': navCtrl.opened === 'Insurance', 'header-links-section-component--switched': navCtrl.switched === 'Insurance' }\" data-ng-mouseenter=\"navCtrl.openDesktopMenu($event, 'Insurance')\" data-ng-mouseleave=\"navCtrl.closeDesktopMenu($event)\">...</li>`\n\nThis element `<li.header-links-section-component>` is not visible because its ancestor has `position: fixed` CSS property and it is overflowed by other elements. How about scrolling to the element with `cy.scrollIntoView()`?\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying: `cy.click()` failed because this element is not visible:\n\n`<li class=\"header-links-section-component\" data-ng-class=\"{ 'header-links-section-component--opened': navCtrl.opened === 'Insurance', 'header-links-section-component--switched': navCtrl.switched === 'Insurance' }\" data-ng-mouseenter=\"navCtrl.openDesktopMenu($event, 'Insurance')\" data-ng-mouseleave=\"navCtrl.closeDesktopMenu($event)\">...</li>`\n\nThis element `<li.header-links-section-component>` is not visible because its ancestor has `position: fixed` CSS property and it is overflowed by other elements. How about scrolling to the element with `cy.scrollIntoView()`?\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureVisibility (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:159691:24)\n    at runAllChecks (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:148822:14)\n    at retryActionability (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:148865:16)\n    at tryCatcher (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:10130:23)\n    at Function.Promise.attempt.Promise.try (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:7404:29)\n    at tryFn (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:162938:24)\n    at whenStable (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:162979:12)\n    at https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:162502:16\n    at tryCatcher (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:10130:23)\n    at Promise._settlePromiseFromHandler (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:8065:31)\n    at Promise._settlePromise (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:8122:18)\n    at Promise._settlePromise0 (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:8167:10)\n    at Promise._settlePromises (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:8247:18)\n    at Promise._fulfill (https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:8191:18)\n    at https://www.moneysupermarket.com/__cypress/runner/cypress_runner.js:9805:46\nFrom Your Spec Code:\n    at Context.eval (https://www.moneysupermarket.com/__cypress/tests?p=cypress/integration/login.js:62:24)",
+                "diff": null
+              },
+              "uuid": "e0f00e5e-6e29-462e-a72b-a08e8e920e5a",
+              "parentUUID": "957d5acc-b96d-478d-8c9c-9b2cb2297329",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e0f00e5e-6e29-462e-a72b-a08e8e920e5a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14424,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

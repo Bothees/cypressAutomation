@@ -1,9 +1,23 @@
 {
+    "name": "automation",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
     "scripts": {
-        "clean:reports":"rm -rf mochawesome-report/",
-        "test":"npm run clean:reports && cypress run",
-        "merge-reports":"mochawesome-merge mochawesome-report/*.json > cypress-test-report.json",
-        "create:html:report":"marge --reportDir Testreport cypress-test-report.json",
-        "generate:html:report":"npm run merge-reports && npm run create:html:report"
+        "clean:reports": "rm -rf mochawesome-report/",
+        "test": "npm run clean:reports && cypress run --browser chrome",
+        "merge-reports": "mochawesome-merge mochawesome-report/*.json > cypress-test-report.json",
+        "create:html:report": "marge --reportDir Testreport cypress-test-report.json",
+        "generate:html:report": "npm run merge-reports && npm run create:html:report"
+    },
+    "devDependencies": {
+        "cypress": "^4.10.0",
+        "mocha": "^8.0.1",
+        "mochawesome": "^6.1.1",
+        "mochawesome-merge": "^4.1.0",
+        "mochawesome-report-generator": "^5.1.0"
+    },
+    "dependencies": {
+        "chai": "^4.2.0"
     }
 }

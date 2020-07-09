@@ -1,0 +1,240 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-09T10:32:12.376Z",
+    "end": "2020-07-09T10:32:58.220Z",
+    "duration": 45844,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3269f5a5-bbb3-4ff5-ba85-010dee908549",
+      "title": "",
+      "fullFile": "cypress/integration/loginAndVerify.js",
+      "file": "cypress/integration/loginAndVerify.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d34e6732-4f31-40cb-a9d4-31796d753c30",
+          "title": "before",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "714d8631-3f54-44c3-81fc-b38fd9f7490b",
+              "title": "First Test",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Successful Login",
+                  "fullTitle": "before First Test Successful Login",
+                  "timedOut": null,
+                  "duration": 11693,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.sign-out__button').click();",
+                  "err": {},
+                  "uuid": "c811421e-09e8-4b66-9f5f-d68f2bb55343",
+                  "parentUUID": "714d8631-3f54-44c3-81fc-b38fd9f7490b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c811421e-09e8-4b66-9f5f-d68f2bb55343"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 11693,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "636b5e89-d375-4acc-9fa1-4610a7d8d9a3",
+              "title": "Check Quote History",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "verify All the options available",
+                  "fullTitle": "before Check Quote History verify All the options available",
+                  "timedOut": null,
+                  "duration": 8339,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.navigation-bar__item-link').each(function ($menu, index, $list) {\n  var t = $list.get(index).innerText;\n  expect(t).to.equal(list[index]);\n});\ncy.get('.sign-out__button').click();",
+                  "err": {},
+                  "uuid": "36286a16-fdac-4299-9179-638bdbc3b95d",
+                  "parentUUID": "636b5e89-d375-4acc-9fa1-4610a7d8d9a3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "36286a16-fdac-4299-9179-638bdbc3b95d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 8339,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "16555cb8-58b3-448a-ac81-a053ba0c86c2",
+              "title": "Profile information",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "verify Profile information",
+                  "fullTitle": "before Profile information verify Profile information",
+                  "timedOut": null,
+                  "duration": 6667,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.navigation-bar__item-link').each(function ($menu, index, $list) {\n  if ($list.get(index).innerText === list[2]) {\n    $list.get(index).click();\n  }\n});\ncy.get('.person-details__name').then(function ($input) {\n  expect($input[0].innerText).to.eq('Boothiraj Palanisamy');\n});\ncy.get('.sign-out__button').click();",
+                  "err": {},
+                  "uuid": "96d3a822-a426-42ae-b9b0-eb1fbcd270e8",
+                  "parentUUID": "16555cb8-58b3-448a-ac81-a053ba0c86c2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "96d3a822-a426-42ae-b9b0-eb1fbcd270e8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6667,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8837e119-9f59-492a-866b-a23ac7b18162",
+              "title": "Top Navigation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Hover Top Navigation and click on option",
+                  "fullTitle": "before Top Navigation Hover Top Navigation and click on option",
+                  "timedOut": null,
+                  "duration": 16398,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.top-navigation-container li').each(function ($menu, index, $list) {}).then(function ($list) {\n  expect($list).to.have.length(7);\n});\ncy.get('.top-navigation-container li a[href=\"https://www.moneysupermarket.com/insurance/\"].header-links-section-component__title').as('insurance');\ncy.get('@insurance').click();\ncy.url().should('equal', 'https://www.moneysupermarket.com/insurance/');\ncy.contains('(Log out)').click();",
+                  "err": {},
+                  "uuid": "e118061b-e2ce-4cd2-8b9e-5fc6934b18c6",
+                  "parentUUID": "8837e119-9f59-492a-866b-a23ac7b18162",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e118061b-e2ce-4cd2-8b9e-5fc6934b18c6"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 16398,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

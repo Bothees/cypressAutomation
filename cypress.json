@@ -10,5 +10,7 @@
     "overwrite":false,
     "html":false,
     "json":true
-  }
+  },
+  "viewportWidth": 1280,
+  "viewportHeight": 720
 }

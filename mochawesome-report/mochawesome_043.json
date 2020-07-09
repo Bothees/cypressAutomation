@@ -1,0 +1,244 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-09T10:35:43.714Z",
+    "end": "2020-07-09T10:36:08.105Z",
+    "duration": 24391,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "2c6d3ad9-9400-4836-a88d-959fa622fe78",
+      "title": "",
+      "fullFile": "cypress/integration/loginAndVerify.js",
+      "file": "cypress/integration/loginAndVerify.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71e2bd0f-faf9-409a-8d28-928d19a16167",
+          "title": "before",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e5e08383-d2ed-4222-a3b7-9fd3c496bb1c",
+              "title": "First Test",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Successful Login",
+                  "fullTitle": "before First Test Successful Login",
+                  "timedOut": null,
+                  "duration": 7002,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.sign-out__button').click();",
+                  "err": {},
+                  "uuid": "c016441e-0f1b-4b68-82ef-d59a36e8cd7e",
+                  "parentUUID": "e5e08383-d2ed-4222-a3b7-9fd3c496bb1c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c016441e-0f1b-4b68-82ef-d59a36e8cd7e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7002,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "97a665db-e7b6-485c-b5ea-e41b8d65aabb",
+              "title": "Check Quote History",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "verify All the options available",
+                  "fullTitle": "before Check Quote History verify All the options available",
+                  "timedOut": null,
+                  "duration": 6692,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.navigation-bar__item-link').each(function ($menu, index, $list) {\n  var t = $list.get(index).innerText;\n  expect(t).to.equal(list[index]);\n});\ncy.get('.sign-out__button').click();",
+                  "err": {},
+                  "uuid": "579c715f-d7c7-485d-832c-5b5dbc2c28cf",
+                  "parentUUID": "97a665db-e7b6-485c-b5ea-e41b8d65aabb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "579c715f-d7c7-485d-832c-5b5dbc2c28cf"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6692,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2dc4b7fe-a664-419b-91a1-ce38b79b9e52",
+              "title": "Profile information",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "verify Profile information",
+                  "fullTitle": "before Profile information verify Profile information",
+                  "timedOut": null,
+                  "duration": 7237,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.navigation-bar__item-link').each(function ($menu, index, $list) {\n  if ($list.get(index).innerText === list[2]) {\n    $list.get(index).click();\n  }\n});\ncy.get('.person-details__name').then(function ($input) {\n  expect($input[0].innerText).to.eq('Boothiraj Palanisamy');\n});\ncy.get('.sign-out__button').click();",
+                  "err": {},
+                  "uuid": "861d9ebc-4962-412c-a428-3bab73501bc1",
+                  "parentUUID": "2dc4b7fe-a664-419b-91a1-ce38b79b9e52",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "861d9ebc-4962-412c-a428-3bab73501bc1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7237,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2d05178b-6ee4-4845-9e82-de278f14daff",
+              "title": "Top Navigation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Hover Top Navigation and click on option",
+                  "fullTitle": "before Top Navigation Hover Top Navigation and click on option",
+                  "timedOut": null,
+                  "duration": 743,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.top-navigation-container li').each(function ($menu, index, $list) {}).then(function ($list) {\n  expect($list).to.have.length(7);\n});\ncy.get('.top-navigation-container li a[href=\"https://www.moneysupermarket.com/insurance/\"].header-links-section-component__title').as('insurance');\ncy.get('@insurance').click();\ncy.url().should('equal', 'https://www.moneysupermarket.com/insurance/');\ncy.contains('(Log out)').click();",
+                  "err": {
+                    "message": "Error: Removing cookie failed for: {\"url\":\"http://www.moneysupermarket.com/my-profile/sign-in/\",\"name\":\"logglytrackingsession\"}\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `before`",
+                    "estack": "Error: Removing cookie failed for: {\"url\":\"http://www.moneysupermarket.com/my-profile/sign-in/\",\"name\":\"logglytrackingsession\"}\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `before`\n    throwError@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13358:36\n    clear/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13368:16\nFrom previous event:\n    clear@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13363:10\nFrom previous event:\n    clear@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13373:6\n    clearCookie@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13421:17\n    invoke/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13307:33\nFrom previous event:\n    invoke@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13306:20\n    connect/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:13326:16\n    [164]</Emitter.prototype.emit@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14230:20\n    [199]</Socket.prototype.onevent@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:20091:10\n    [199]</Socket.prototype.onpacket@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:20049:12\n    [163]</module.exports/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14093:15\n    [164]</Emitter.prototype.emit@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14230:20\n    [197]</Manager.prototype.ondecoded@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:19557:8\n    [163]</module.exports/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14093:15\n    [164]</Emitter.prototype.emit@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14230:20\n    [191]</Decoder.prototype.add@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:18927:12\n    [197]</Manager.prototype.ondata@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:19547:16\n    [163]</module.exports/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14093:15\n    [176]</Emitter.prototype.emit@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:16644:20\n    [168]</Socket.prototype.onPacket@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14754:14\n    [168]</Socket.prototype.setTransport/<@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:14571:10\n    [176]</Emitter.prototype.emit@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:16644:20\n    [169]</Transport.prototype.onPacket@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:15192:8\n    [169]</Transport.prototype.onData@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:15184:8\n    [174]</</WS.prototype.addEventListeners/this.ws.onmessage@moz-extension://8d4065ca-ada4-fc41-8ea7-b37e175182fe/background.js:16317:10",
+                    "diff": null
+                  },
+                  "uuid": "e6c589d3-2c9c-4923-8f7d-e730949549b4",
+                  "parentUUID": "2d05178b-6ee4-4845-9e82-de278f14daff",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "e6c589d3-2c9c-4923-8f7d-e730949549b4"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 743,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

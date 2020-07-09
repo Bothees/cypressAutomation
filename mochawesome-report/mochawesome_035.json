@@ -1,0 +1,199 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-08T20:41:20.518Z",
+    "end": "2020-07-08T20:41:25.236Z",
+    "duration": 4718,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ff24a3c6-972e-4811-b43a-92402d1db31e",
+      "title": "",
+      "fullFile": "cypress/integration/examples/utilities.spec.js",
+      "file": "cypress/integration/examples/utilities.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+          "title": "Utilities",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cypress._ - call a lodash method",
+              "fullTitle": "Utilities Cypress._ - call a lodash method",
+              "timedOut": null,
+              "duration": 815,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/_\ncy.request('https://jsonplaceholder.cypress.io/users').then(function (response) {\n  var ids = Cypress._.chain(response.body).map('id').take(3).value();\n  expect(ids).to.deep.eq([1, 2, 3]);\n});",
+              "err": {},
+              "uuid": "d092447b-e096-4ebd-9352-a4fc8d4f0446",
+              "parentUUID": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cypress.$ - call a jQuery method",
+              "fullTitle": "Utilities Cypress.$ - call a jQuery method",
+              "timedOut": null,
+              "duration": 278,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/$\nvar $li = Cypress.$('.utility-jquery li:first');\ncy.wrap($li).should('not.have.class', 'active').click().should('have.class', 'active');",
+              "err": {},
+              "uuid": "c07d66e5-ffa4-42d7-a848-07d8fc32bb4a",
+              "parentUUID": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cypress.Blob - blob utilities and base64 string conversion",
+              "fullTitle": "Utilities Cypress.Blob - blob utilities and base64 string conversion",
+              "timedOut": null,
+              "duration": 819,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/blob\ncy.get('.utility-blob').then(function ($div) {\n  return (// https://github.com/nolanlawson/blob-util#imgSrcToDataURL\n    // get the dataUrl string for the javascript-logo\n    Cypress.Blob.imgSrcToDataURL('https://example.cypress.io/assets/img/javascript-logo.png', undefined, 'anonymous').then(function (dataUrl) {\n      // create an <img> element and set its src to the dataUrl\n      var img = Cypress.$('<img />', {\n        src: dataUrl\n      }); // need to explicitly return cy here since we are initially returning\n      // the Cypress.Blob.imgSrcToDataURL promise to our test\n      // append the image\n      $div.append(img);\n      cy.get('.utility-blob img').click().should('have.attr', 'src', dataUrl);\n    })\n  );\n});",
+              "err": {},
+              "uuid": "cd5d2f35-acd0-47bb-aeea-f4c1782aa054",
+              "parentUUID": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cypress.minimatch - test out glob patterns against strings",
+              "fullTitle": "Utilities Cypress.minimatch - test out glob patterns against strings",
+              "timedOut": null,
+              "duration": 142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/minimatch\nvar matching = Cypress.minimatch('/users/1/comments', '/users/*/comments', {\n  matchBase: true\n});\nexpect(matching, 'matching wildcard').to.be[\"true\"];\nmatching = Cypress.minimatch('/users/1/comments/2', '/users/*/comments', {\n  matchBase: true\n});\nexpect(matching, 'comments').to.be[\"false\"]; // ** matches against all downstream path segments\nmatching = Cypress.minimatch('/foo/bar/baz/123/quux?a=b&c=2', '/foo/**', {\n  matchBase: true\n});\nexpect(matching, 'comments').to.be[\"true\"]; // whereas * matches only the next path segment\nmatching = Cypress.minimatch('/foo/bar/baz/123/quux?a=b&c=2', '/foo/*', {\n  matchBase: false\n});\nexpect(matching, 'comments').to.be[\"false\"];",
+              "err": {},
+              "uuid": "5f037480-5c2f-4ef3-9ffb-3c9c655ae346",
+              "parentUUID": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cypress.moment() - format or parse dates using a moment method",
+              "fullTitle": "Utilities Cypress.moment() - format or parse dates using a moment method",
+              "timedOut": null,
+              "duration": 269,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/moment\nvar time = Cypress.moment('2014-04-25T19:38:53.196Z').utc().format('h:mm A');\nexpect(time).to.be.a('string');\ncy.get('.utility-moment').contains('3:38 PM').should('have.class', 'badge'); // the time in the element should be between 3pm and 5pm\nvar start = Cypress.moment('3:00 PM', 'LT');\nvar end = Cypress.moment('5:00 PM', 'LT');\ncy.get('.utility-moment .badge').should(function ($el) {\n  // parse American time like \"3:38 PM\"\n  var m = Cypress.moment($el.text().trim(), 'LT'); // display hours + minutes + AM|PM\n  var f = 'h:mm A';\n  expect(m.isBetween(start, end), \"\".concat(m.format(f), \" should be between \").concat(start.format(f), \" and \").concat(end.format(f))).to.be[\"true\"];\n});",
+              "err": {},
+              "uuid": "cede2948-0fc3-4546-87f7-9b4b4d6b3dc9",
+              "parentUUID": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cypress.Promise - instantiate a bluebird promise",
+              "fullTitle": "Utilities Cypress.Promise - instantiate a bluebird promise",
+              "timedOut": null,
+              "duration": 1170,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/promise\nvar waited = false;\n/**\n * @return Bluebird<string>\n */\nfunction waitOneSecond() {\n  // return a promise that resolves after 1 second\n  // @ts-ignore TS2351 (new Cypress.Promise)\n  return new Cypress.Promise(function (resolve, reject) {\n    setTimeout(function () {\n      // set waited to true\n      waited = true; // resolve with 'foo' string\n      resolve('foo');\n    }, 1000);\n  });\n}\ncy.then(function () {\n  return (// return a promise to cy.then() that\n    // is awaited until it resolves\n    // @ts-ignore TS7006\n    waitOneSecond().then(function (str) {\n      expect(str).to.eq('foo');\n      expect(waited).to.be[\"true\"];\n    })\n  );\n});",
+              "err": {},
+              "uuid": "8df4c5d6-78d2-459f-93bb-b31773aa797c",
+              "parentUUID": "646f712d-4f86-49fd-a0f0-eebcf5fb9d7f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d092447b-e096-4ebd-9352-a4fc8d4f0446",
+            "c07d66e5-ffa4-42d7-a848-07d8fc32bb4a",
+            "cd5d2f35-acd0-47bb-aeea-f4c1782aa054",
+            "5f037480-5c2f-4ef3-9ffb-3c9c655ae346",
+            "cede2948-0fc3-4546-87f7-9b4b4d6b3dc9",
+            "8df4c5d6-78d2-459f-93bb-b31773aa797c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3493,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

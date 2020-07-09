@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-08T20:41:01.093Z",
+    "end": "2020-07-08T20:41:06.110Z",
+    "duration": 5017,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5383f962-f5c6-4f8d-9d32-957c589459ec",
+      "title": "",
+      "fullFile": "cypress/integration/examples/spies_stubs_clocks.spec.js",
+      "file": "cypress/integration/examples/spies_stubs_clocks.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e12a26bf-b2e3-44a8-b484-a8a03665cbb0",
+          "title": "Spies, Stubs, and Clock",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cy.spy() - wrap a method in a spy",
+              "fullTitle": "Spies, Stubs, and Clock cy.spy() - wrap a method in a spy",
+              "timedOut": null,
+              "duration": 326,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/spy\ncy.visit('https://example.cypress.io/commands/spies-stubs-clocks');\nvar obj = {\n  foo: function foo() {}\n};\nvar spy = cy.spy(obj, 'foo').as('anyArgs');\nobj.foo();\nexpect(spy).to.be.called;",
+              "err": {},
+              "uuid": "57964ad2-cb2c-4718-931f-ebfae7f1206b",
+              "parentUUID": "e12a26bf-b2e3-44a8-b484-a8a03665cbb0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.spy() retries until assertions pass",
+              "fullTitle": "Spies, Stubs, and Clock cy.spy() retries until assertions pass",
+              "timedOut": null,
+              "duration": 2529,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/commands/spies-stubs-clocks');\nvar obj = {\n  /**\n   * Prints the argument passed\n   * @param x {any}\n  */\n  foo: function foo(x) {\n    console.log('obj.foo called with', x);\n  }\n};\ncy.spy(obj, 'foo').as('foo');\nsetTimeout(function () {\n  obj.foo('first');\n}, 500);\nsetTimeout(function () {\n  obj.foo('second');\n}, 2500);\ncy.get('@foo').should('have.been.calledTwice');",
+              "err": {},
+              "uuid": "8b7bd7f3-17aa-4856-95a6-e78816869d6a",
+              "parentUUID": "e12a26bf-b2e3-44a8-b484-a8a03665cbb0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.stub() - create a stub and/or replace a function with stub",
+              "fullTitle": "Spies, Stubs, and Clock cy.stub() - create a stub and/or replace a function with stub",
+              "timedOut": null,
+              "duration": 222,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/stub\ncy.visit('https://example.cypress.io/commands/spies-stubs-clocks');\nvar obj = {\n  /**\n   * prints both arguments to the console\n   * @param a {string}\n   * @param b {string}\n  */\n  foo: function foo(a, b) {\n    console.log('a', a, 'b', b);\n  }\n};\nvar stub = cy.stub(obj, 'foo').as('foo');\nobj.foo('foo', 'bar');\nexpect(stub).to.be.called;",
+              "err": {},
+              "uuid": "fd46fd19-7b50-467e-a2ad-7a04974dca46",
+              "parentUUID": "e12a26bf-b2e3-44a8-b484-a8a03665cbb0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.clock() - control time in the browser",
+              "fullTitle": "Spies, Stubs, and Clock cy.clock() - control time in the browser",
+              "timedOut": null,
+              "duration": 286,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/clock\n// create the date in UTC so its always the same\n// no matter what local timezone the browser is running in\nvar now = new Date(Date.UTC(2017, 2, 14)).getTime();\ncy.clock(now);\ncy.visit('https://example.cypress.io/commands/spies-stubs-clocks');\ncy.get('#clock-div').click().should('have.text', '1489449600');",
+              "err": {},
+              "uuid": "7dcbaa3c-1496-4d24-8420-b98db79c7b96",
+              "parentUUID": "e12a26bf-b2e3-44a8-b484-a8a03665cbb0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cy.tick() - move time in the browser",
+              "fullTitle": "Spies, Stubs, and Clock cy.tick() - move time in the browser",
+              "timedOut": null,
+              "duration": 348,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/tick\n// create the date in UTC so its always the same\n// no matter what local timezone the browser is running in\nvar now = new Date(Date.UTC(2017, 2, 14)).getTime();\ncy.clock(now);\ncy.visit('https://example.cypress.io/commands/spies-stubs-clocks');\ncy.get('#tick-div').click().should('have.text', '1489449600');\ncy.tick(10000); // 10 seconds passed\ncy.get('#tick-div').click().should('have.text', '1489449610');",
+              "err": {},
+              "uuid": "088e3244-cc3d-4ac9-b396-ef1812006581",
+              "parentUUID": "e12a26bf-b2e3-44a8-b484-a8a03665cbb0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "57964ad2-cb2c-4718-931f-ebfae7f1206b",
+            "8b7bd7f3-17aa-4856-95a6-e78816869d6a",
+            "fd46fd19-7b50-467e-a2ad-7a04974dca46",
+            "7dcbaa3c-1496-4d24-8420-b98db79c7b96",
+            "088e3244-cc3d-4ac9-b396-ef1812006581"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3711,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
