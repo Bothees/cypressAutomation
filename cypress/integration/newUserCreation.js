@@ -22,7 +22,11 @@ describe('Create new account on selfridges',() => {
 
        cy.get('#lastName').type(newuser.lastName).should('have.value',newuser.lastName)
 
-       cy.get('#registerLogonId').type(newuser.email).should('have.value',newuser.email)
+       cy.randomEmail().then((email) => {
+            cy.get('#registerLogonId').type(email).should('have.value',email)
+       })
+
+    //    cy.get('#registerLogonId').type(cy.randomEmail()).should('have.value',cy.randomEmail())
    
        cy.get('.radioContainer [type="radio"][value="N"]').check({force:true}).should('be.checked')
           
