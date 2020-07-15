@@ -2,11 +2,27 @@
 
 const { expect } = require("chai")
 
+
+
 context('before',() => {
+
+        let cred = null
+
+        before(function () {
+            // runs once before all tests in the block
+            cy.fixture('loginDetails.json').then(function (user) {
+                cred = user
+            })
+        })  
+    
     beforeEach('run before',() => {
+        cy.clearCookies()
         cy.visit('https://www.moneysupermarket.com/my-account/sign-in/')
-        cy.get('#email').type("bothees@gmail.com")
-        cy.get('#password').type("Autotest2018")
+
+        // Custom command added in commands.js for Login
+        cy.login({ email: cred.username, password: cred.password })
+        // cy.get('#email').type("bothees@gmail.com")
+        // cy.get('#password').type("Autotest2018")
         cy.get('#submit').click()
         cy.wait(100)
         cy.get('.sign-out__user-name').should('contain.text', 'Hi Boothiraj')
@@ -14,6 +30,7 @@ context('before',() => {
 
 
 describe('Login',function() {
+ 
     it('Successful Login', () => {
     cy.get('.sign-out__button').click()
 })
@@ -37,7 +54,7 @@ describe('Profile information',function() {
    it('verify Profile information',() => {
         cy.get('.navigation-bar__item-link').each(($menu,index,$list) => {
             if($list.get(index).innerText === list[2]) {
-                 $list.get(index).click()       
+                 $list.get(index).click()     
             }
         })
         

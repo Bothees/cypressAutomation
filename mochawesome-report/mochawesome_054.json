@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-14T14:17:44.860Z",
+    "end": "2020-07-14T14:18:24.243Z",
+    "duration": 39383,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "42ec6e68-3ade-49aa-87cd-d808b4aaba06",
+      "title": "",
+      "fullFile": "cypress/integration/newUserCreation.js",
+      "file": "cypress/integration/newUserCreation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "83beed77-3f07-415e-9a30-e676b4d96d62",
+          "title": "Create new account on selfridges",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "New Account registration",
+              "fullTitle": "Create new account on selfridges New Account registration",
+              "timedOut": null,
+              "duration": 37203,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.selfridges.com/GB/en/webapp/wcs/stores/servlet/UserRegistrationForm?currPage=__currPage__&storeId=10052&&editRegistration=Y&bct=&langId=-1&catalogId=16151');\ncy.get('#Register').click();\ncy.get('#dk_container_personTitle').click();\ncy.get('.dk_options li a').contains('Miss').click();\ncy.get('#firstName').type('TestingCypress');\ncy.get('#lastName').type('LastName');\ncy.get('#registerLogonId').type('testinnggg@hotmail.com');\ncy.get('.radioContainer [type=\"radio\"][value=\"N\"]').scrollIntoView().check();\ncy.get('#registerLogonPassword').type('Thsfnsjjvsd123£');\ncy.get('#logonPasswordVerify').click().type('Cypress1245$');\ncy.contains('Create an account').click();",
+              "err": {
+                "message": "CypressError: Timed out after waiting `30000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `30000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `30000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `30000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.selfridges.com/__cypress/runner/cypress_runner.js:155493:13)\n    at https://www.selfridges.com/__cypress/runner/cypress_runner.js:156469:16\n    at tryCatcher (https://www.selfridges.com/__cypress/runner/cypress_runner.js:10130:23)\n    at https://www.selfridges.com/__cypress/runner/cypress_runner.js:5252:41\n    at tryCatcher (https://www.selfridges.com/__cypress/runner/cypress_runner.js:10130:23)\n    at Promise._settlePromiseFromHandler (https://www.selfridges.com/__cypress/runner/cypress_runner.js:8065:31)\n    at Promise._settlePromise (https://www.selfridges.com/__cypress/runner/cypress_runner.js:8122:18)\n    at Promise._settlePromise0 (https://www.selfridges.com/__cypress/runner/cypress_runner.js:8167:10)\n    at Promise._settlePromises (https://www.selfridges.com/__cypress/runner/cypress_runner.js:8243:18)\n    at _drainQueueStep (https://www.selfridges.com/__cypress/runner/cypress_runner.js:4837:12)\n    at _drainQueue (https://www.selfridges.com/__cypress/runner/cypress_runner.js:4830:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.selfridges.com/__cypress/runner/cypress_runner.js:4846:5)\n    at Async.drainQueues (https://www.selfridges.com/__cypress/runner/cypress_runner.js:4716:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.selfridges.com/__cypress/tests?p=cypress/integration/newUserCreation.js:6:8)",
+                "diff": null
+              },
+              "uuid": "8d3efd87-6749-4ed4-ac65-a1cc17cafb78",
+              "parentUUID": "83beed77-3f07-415e-9a30-e676b4d96d62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8d3efd87-6749-4ed4-ac65-a1cc17cafb78"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 37203,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
