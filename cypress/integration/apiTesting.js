@@ -55,3 +55,22 @@ describe('Delete Request',() => {
         .should('include', 'application/json');        
     })
 })
+
+describe('Stub a request',() => {
+    it.skip('Stubbing Network request',() => {
+
+        cy.visit('https://app.unidoshdev.com/')
+
+        cy.server().should((server) => {
+            expect(server.delay).to.eq(0)
+            expect(server.method).to.eq('GET')
+            expect(server.status).to.eq(200)
+        })
+        cy.route('GET','https://app.unidoshdev.com/messages/getmessagegroups').as('order')
+
+        cy.get('#dvNotifications').click({force:true})
+
+        cy.wait('@order').its('status').should('eq',200)
+                    
+    })
+})
