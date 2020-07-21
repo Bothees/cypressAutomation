@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "clean:reports": "rm -rf mochawesome-report/",
-        "test": "npm run clean:reports && cypress run --browser chrome --headless --spec /cypress-automation/cypress/integration/loginAndCheckQuotes.js",
+        "test": "npm run clean:reports && cypress run --browser chrome --headless --spec /cypress/integration/loginAndCheckQuotes.js",
         "merge-reports": "mochawesome-merge mochawesome-report/*.json > cypress-test-report.json",
         "create:html:report": "marge --reportDir Testreport cypress-test-report.json",
         "generate:html:report": "npm run merge-reports && npm run create:html:report"
