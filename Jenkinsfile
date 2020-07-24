@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'cypress/base:12, cypress/browsers:chrome67'
-    }
-
-  }
+  agent any
   stages {
     stage('build') {
       steps {
