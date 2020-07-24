@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'cypress/base:12'
+    }
+
+  }
   stages {
     stage('build') {
       steps {
@@ -11,6 +16,6 @@ npm run test'''
   }
   environment {
     HOME = ''
-    CHROME_BIN = '/bin/google-chrome'
+    CHROME_BIN = '\'/bin/google-chrome\''
   }
 }
