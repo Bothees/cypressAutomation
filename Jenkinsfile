@@ -15,7 +15,7 @@ npm run test'''
 
   }
   environment {
-    HOME = ''
-    CHROME_BIN = '\'/usr/bin/google-chrome\''
+    HOME = '.'
+    CHROME_BIN = '/Applications/Google Chrome.app'
   }
 }
