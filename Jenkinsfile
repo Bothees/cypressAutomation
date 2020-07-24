@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'cypress/base:12'
+      image 'cypress/base:12. cypress/browsers:chrome67  '
     }
 
   }
@@ -16,6 +16,6 @@ npm run test'''
   }
   environment {
     HOME = ''
-    CHROME_BIN = '\'/bin/google-chrome\''
+    CHROME_BIN = '\'/usr/bin/google-chrome\''
   }
 }
