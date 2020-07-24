@@ -16,5 +16,6 @@ npm run test'''
   }
   environment {
     HOME = ''
+    CHROME_BIN = '/bin/google-chrome'
   }
 }
