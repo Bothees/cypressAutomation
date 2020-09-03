@@ -1,0 +1,10 @@
+kind: pipeline
+name: default
+
+-name : e2e_test
+image: "cypress/included:3.2.0"
+environment:
+   - CYPRESS_baseUrl=http://jsonplaceholder.typicode.com
+commands:
+  npm install
+  npx cypress run --browser chrome --spec /cypress-automation/cypress/integration/apiTesting.js 
