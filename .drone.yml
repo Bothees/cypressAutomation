@@ -4,5 +4,5 @@ name: default
 -name : e2e_test
 image: "cypress/included:3.2.0"
 commands:
-  npm install
-  npx cypress run --browser chrome --spec /cypress-automation/cypress/*.*js 
+  - npm install
+  - npx cypress run --browser chrome --spec /cypress-automation/cypress/*.*js 
