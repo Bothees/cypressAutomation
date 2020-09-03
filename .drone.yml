@@ -9,3 +9,7 @@ steps:
     commands:
       - $(npm bin)/cypress install
       - $(npm bin)/cypress run 
+trigger:
+  branch:
+    - master
+    - stable*
