@@ -8,7 +8,7 @@ steps:
       CYPRESS_baseUrl: http://jsonplaceholder.typicode.com
     commands:
       - $(npm bin)/cypress install
-      - $(npm bin)/cypress run 
+      - $(npm bin)/cypress run --spec "cypress-automation/cypress/integration/apiTesting.js" "cypress/integration/loginAndCheckQuotes.js"
 trigger:
   branch:
     - master
