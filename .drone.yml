@@ -5,4 +5,4 @@ name: default
 image: "cypress/included:3.2.0"
 commands:
   npm install
-  npx cypress run --browser chrome --spec /cypress-automation/cypress/integration/apiTesting.js 
+  npx cypress run --browser chrome --spec /cypress-automation/cypress/*.*js 
