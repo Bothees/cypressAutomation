@@ -1,5 +1,5 @@
 kind: pipeline
-name: run_tests
+name: default
 
 steps:
   - name: testing
