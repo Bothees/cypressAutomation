@@ -9,9 +9,7 @@ steps:
     commands:
       - $(npm bin)/cypress install
       - $(npm bin)/cypress run --browser chrome
-  when:
-   branch:
+trigger:
+  branch:
     - master
-  event:
-   - push
-   - pull-request
+    - stable*
