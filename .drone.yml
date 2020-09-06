@@ -9,6 +9,9 @@ steps:
     commands:
       - $(npm bin)/cypress install
       - $(npm bin)/cypress run
-trigger:
-  branch:
+  when:
+   branch:
     - master
+  event:
+   - push
+   - pull-request
