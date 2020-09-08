@@ -25,8 +25,6 @@ describe('Create new account on selfridges',() => {
        cy.randomEmail().then((email) => {
             cy.get('#registerLogonId').type(email).should('have.value',email)
        })
-
-    //    cy.get('#registerLogonId').type(cy.randomEmail()).should('have.value',cy.randomEmail())
    
        cy.get('.radioContainer [type="radio"][value="N"]').check({force:true}).should('be.checked')
           

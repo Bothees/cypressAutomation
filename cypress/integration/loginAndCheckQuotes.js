@@ -21,8 +21,6 @@ context('before',() => {
 
         // Custom command added in commands.js for Login
         cy.login({ email: cred.username, password: cred.password })
-        // cy.get('#email').type("bothees@gmail.com")
-        // cy.get('#password').type("Autotest2018")
         cy.get('#submit').click()
         cy.wait(100)
         cy.get('.sign-out__user-name').should('contain.text', 'Hi Boothiraj')
