@@ -8,7 +8,7 @@ steps:
       CYPRESS_baseUrl: http://jsonplaceholder.typicode.com
     commands:
       - $(npm bin)/cypress install
-      - $(npm bin)/cypress run --spec cypress/integration/apiTesting.js
+      - $(npm bin)/cypress run --browser chrome --spec cypress/integration/apiTesting.js
 trigger:
   branch:
     - master
